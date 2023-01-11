@@ -1,0 +1,66 @@
+body {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgb(0 0 0 / 10%);
+    width: 400px;
+    margin: 100px auto;
+    padding: 1rem;
+    display: grid;
+}
+
+
+.photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 2px;
+    position: relative;
+  }
+
+  .photo-item {
+    overflow: hidden;
+    border-radius: 5px;
+    background: #eee;
+  }
+
+  .photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+.photos {
+    grid-auto-rows: 0;
+    overflow: hidden;
+   }
+  
+   .photos div:nth-child(9){
+    /* border: 1px solid red; */
+    position: relative;
+   }
+  
+   .photos div:nth-child(9) img {
+    z-index:5;
+    filter: brightness(.7);
+   }
+  
+   .photos div:nth-child(9)::after {
+    /* content: "+" counter(photos) " images"; */
+    color: white;
+    z-index: 1;
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    font-size: 2rem;
+   }
+  
+   div:first-child:nth-last-child(11),
+  div:first-child:nth-last-child(11) ~ div:nth-child(9)::after {
+      content: "+2";
+  }
+  
+  div:first-child:nth-last-child(10),
+  div:first-child:nth-last-child(10) ~ div:nth-child(9)::after {
+      content: "+1";
+  }

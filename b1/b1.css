@@ -1,0 +1,119 @@
+body {
+    min-height: 100vh;
+    overflow: hidden;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    row-gap: 15px;
+  }
+
+  .row1,
+  .row2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    position: relative;
+  }
+
+  .box {
+    height: 60px;
+    width: 60px;
+    border: 1px solid black;
+    margin-right: 15px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .box8 {
+    margin-right: 0;
+  }
+
+  [type="checkbox"] {
+    /*di pwede ag display hidden diri*/
+    position: absolute;
+    left: -99999px;
+  }
+
+  [type="checkbox"]:checked + .box {
+    /* para ang drawing sa border sa sulod ra*/
+    outline: 2px solid black;
+    outline-offset: -2px;
+    background-color: gold;
+  }
+
+  #box1:checked ~ p span {
+    display: none;
+  }
+
+  #box2:checked ~ p span {
+    display: none;
+  }
+
+  #box3:checked ~ p span {
+    display: none;
+  }
+
+  #box4:checked ~ p span {
+    display: none;
+  }
+
+  #box1:checked ~ p::after {
+    content: "10";
+  }
+
+  #box2:checked ~ p::after {
+    content: "32";
+  }
+
+  #box3:checked ~ p::after {
+    content: "64";
+  }
+
+  #box4:checked ~ p::after {
+    content: "-15";
+  }
+
+  #box1:checked ~ #box2:checked ~ p::after {
+    content: "42";
+  }
+
+  #box1:checked ~ #box3:checked ~ p::after {
+    content: "74";
+  }
+
+  #box1:checked ~ #box4:checked ~ p::after {
+    content: "-5";
+  }
+
+  #box2:checked ~ #box3:checked ~ p::after {
+    content: "96";
+  }
+
+  #box2:checked ~ #box4:checked ~ p::after {
+    content: "17";
+  }
+
+  #box3:checked ~ #box4:checked ~ p::after {
+    content: "49";
+  }
+
+  #box1:checked ~ #box2:checked ~ #box3:checked ~ p::after {
+    content: "106";
+  }
+  
+  #box2:checked ~ #box3:checked ~ #box4:checked ~ p::after {
+    content: "81";
+  }
+
+  #box1:checked ~ #box3:checked ~ #box4:checked ~ p::after {
+    content: "59";
+  }
+
+  #box1:checked ~ #box2:checked ~ #box4:checked ~ p::after {
+    content: "27";
+  }
+
+  #box1:checked ~ #box2:checked ~ #box3:checked  ~ #box4:checked ~ p::after {
+    content: "91";
+  }
