@@ -1,8 +1,16 @@
+body {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  display: grid;
+  grid-template-columns: repeat(3, 310px);
+  gap: 10px;
+}
+
 .flip-card {
     background-color: transparent;
-    width: 300px;
-    height: 450px;
+    width: 310px;
+    height: 500px;
     perspective: 1000px;
+    grid-column: 1 / 2;
   }
   
   .flip-card-inner {
@@ -38,25 +46,167 @@
   }
 
   h1 {
-    
+    font-weight: normal;
   }
 
   ul {
     padding-left: 40px;
     padding-right: 40px;
-    margin-top: 50px;
+    margin-top: 35px;
   }
   
   li {
     list-style: none;
     font-size: 13px;
     border-bottom: 1px solid white;
-    padding: 14px;
+    padding: 13px;
     text-align: center;
   }
 
-  h2 { }
+  .backItems {
+    margin-top: 100px;
+  }
 
   .price {
     font-size: 50px;
   }
+
+  
+.flip-card2 {
+  background-color: transparent;
+  width: 310px;
+  height: 500px;
+  perspective: 1000px;
+  grid-column: 2 / 3;
+
+}
+
+.flip-card-inner2 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card2:hover .flip-card-inner2 {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front2, .flip-card-back2 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* -webkit-backface-visibility: hidden; */
+  backface-visibility: hidden;
+}
+
+.flip-card-front2 {
+  background: rgb(253,233,99);
+background: linear-gradient(145deg, rgba(253,233,99,1) 0%, rgba(242,35,213,1) 100%);
+  color: white;
+}
+
+.flip-card-back2 {
+  background: rgb(253,233,99);
+background: linear-gradient(145deg, rgba(253,233,99,1) 0%, rgba(242,35,213,1) 100%);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+h1 {
+  font-weight: normal;
+}
+
+ul {
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 35px;
+}
+
+li {
+  list-style: none;
+  font-size: 13px;
+  border-bottom: 1px solid white;
+  padding: 13px;
+  text-align: center;
+}
+
+.backItems2 {
+  margin-top: 100px;
+}
+
+.price2 {
+  font-size: 50px;
+}
+
+  
+.flip-card3 {
+  background-color: transparent;
+  width: 310px;
+  height: 500px;
+  perspective: 1000px;
+  grid-column: 3 / 4;
+
+}
+
+.flip-card-inner3 {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card3:hover .flip-card-inner3 {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front3, .flip-card-back3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* -webkit-backface-visibility: hidden; */
+  backface-visibility: hidden;
+}
+
+.flip-card-front3 {
+  background: rgb(149,83,250);
+background: linear-gradient(145deg, rgba(149,83,250,1) 0%, rgba(44,247,116,1) 100%);
+  color: white;
+}
+
+.flip-card-back3 {
+  background: rgb(149,83,250);
+background: linear-gradient(145deg, rgba(149,83,250,1) 0%, rgba(44,247,116,1) 100%);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+h1 {
+  font-weight: normal;
+}
+
+ul {
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 35px;
+}
+
+li {
+  list-style: none;
+  font-size: 13px;
+  border-bottom: 1px solid white;
+  padding: 13px;
+  text-align: center;
+}
+
+.backItems3 {
+  margin-top: 100px;
+}
+
+.price3 {
+  font-size: 50px;
+}
