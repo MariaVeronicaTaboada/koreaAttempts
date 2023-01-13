@@ -24,6 +24,12 @@
         <div class="photo-item"><img src="./images/img-11.jpg" alt="img-11"></div>
     </div>
     <br>
-    <button>Remove First Image</button>
+    <button onclick="remove()">Remove First Image</button>
+
+    <script>
+        function remove() {
+          document.querySelectorAll(".photo-item")[0].remove();
+        }
+      </script>
 </body>
 </html>
