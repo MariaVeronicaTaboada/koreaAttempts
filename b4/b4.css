@@ -1,8 +1,14 @@
+body {
+    height: 100vh;
+    text-align: center;
+}
+
 button {
     background-color: palevioletred;
-    font: white;
     border: none;
     border-radius: 5%;
     width: 100px;
     height: 50px;
+    font: larger white;
+    animation: ;
 }
